@@ -1,13 +1,9 @@
 # Welcome to the world of Pokemon!
-import Type
-import Pokemon
+from Type import Type
+from Pokemon import Pokemon
 
-available_Types = Type()
-available_Types = ["Fire", "Water", "Grass"]
+its_type = Type()
+charmander_moveset = ["Tackle", "Ember", "Tail Whip", "Growl"]
+charmander = Pokemon("Charmander", its_type.set_type("Fire"), charmander_moveset, "Char Char!")
 
-charmander_Moveset = ["Tackle", "Ember", "Tail Whip", "Growl"]
-charmander = Pokemon("Charmander", "Fire", charmander_Moveset, "Char Char!")
-
-print(charmander.get_Name() + " attacks! " + charmander.get_Cry())
-
-
+print(charmander.get_name() + " attacks! " + charmander.get_cry())

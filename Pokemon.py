@@ -1,24 +1,28 @@
-from Type.py import Type
+import random
 
-def initialize_Moveset(moveset):
-        moveset = ["", "", "", ""]
+from Type import Type
 
-class Pokemon():
 
-    def __init__(self, name, type: Type, moveset, cry):
+class Pokemon:
+
+    def __init__(self, name, its_type: Type, moveset, cry):
         self.name = name
-        self.type = type
+        self.its_type = its_type
+        self.moveset = ["", "", "", ""]
         self.moveset = moveset
-        initialize_Moveset(self.moveset)
         self.cry = cry
 
-    def get_Name(self):
+    def get_name(self):
         return self.name
     
-    def get_Type(self):
-        return self.type
+    def get_type(self):
+        return self.its_type
 
-    def get_Cry(self):
+    def get_moveset(self):
+        return self.moveset
+
+    def get_cry(self):
         return self.cry
 
-
+    def use_attack(self):
+        return random.choice(self.get_moveset())
