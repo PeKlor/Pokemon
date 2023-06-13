@@ -1,7 +1,8 @@
 # Welcome to the world of Pokemon!
-import Type.py
-from Pokemon import Pokemon
+import Type
+import Pokemon
 
+available_Types = Type()
 available_Types = ["Fire", "Water", "Grass"]
 
 charmander_Moveset = ["Tackle", "Ember", "Tail Whip", "Growl"]
