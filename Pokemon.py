@@ -1,5 +1,4 @@
 import random
-
 from Type import Type
 
 
@@ -26,3 +25,11 @@ class Pokemon:
 
     def use_attack(self):
         return random.choice(self.get_moveset())
+
+    def becomes(self, other):
+        self.name = other.get_name()
+        self.its_type = other.get_type()
+        self.moveset = other.get_moveset()
+        self.cry = other.get_cry()
+
+
