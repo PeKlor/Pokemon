@@ -1,5 +1,6 @@
 import random
 from Type import Type
+from Move import Move
 
 
 class Pokemon:
@@ -32,4 +33,9 @@ class Pokemon:
         self.moveset = other.get_moveset()
         self.cry = other.get_cry()
 
-
+    def attacks(self, my_move: Move, other):
+        print(self.get_name() + " attacks " + other.get_name() + "!")
+        if my_move.get_type().is_effective_on(other.get_type()):
+            return "It's super effective!"
+        elif my_move.get_type().is_resisted_by(other.get_type()):
+            return "It's not very effective..."

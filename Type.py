@@ -1,6 +1,6 @@
 class Type:
     
-    def __init__(self, type_name=""):
+    def __init__(self, type_name: str):
         self.type_name = type_name
         # self.available_types = ["Fire", "Water", "Grass"]
 
@@ -10,7 +10,7 @@ class Type:
     def set_type(self, string):
         self.type_name = string
 
-    def is_weak_to(self, other_type):
+    def is_resisted_by(self, other_type):
         if self.type_name == "Fire" and other_type == "Water":
             return True
         elif self.type_name == "Water" and other_type == "Grass":
